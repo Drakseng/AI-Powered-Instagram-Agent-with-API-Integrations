@@ -30,11 +30,11 @@ For detailed prompts, examples and design notes, see:
 
 ✅ 3 different caption modes:
 
-  Product Introduction (Mod 1)
+    Product Introduction (Mod 1)
 
-  Info + Product Recommendation (Mod 2)
+    Info + Product Recommendation (Mod 2)
 
-  Topic-based Educational + Soft Product Link (Mod 3)
+    Topic-based Educational + Soft Product Link (Mod 3)
 
 ✅ AI image generation per mode (DALL·E)
 
@@ -45,28 +45,4 @@ For detailed prompts, examples and design notes, see:
 ✅ Optional Instagram auto-posting
 
 
-### 🧱 Project Structure
 
-ai-instagram-product-agent/
-├─ main.py                  # Entry point (interactive CLI)
-├─ README.md
-├─ requirements.txt
-├─ .env.example
-└─ src/
-   ├─ __init__.py
-   ├─ config.py             # Central configuration using environment variables
-   ├─ core/
-   │  ├─ pipeline_product.py   # Orchestrates the whole product workflow
-   │  ├─ caption_mod1.py       # Mode 1 caption: product introduction
-   │  ├─ caption_mod2.py       # Mode 2 caption: info + product recommendation
-   │  ├─ caption_mod3.py       # Mode 3 caption: topic-based content + soft product link
-   │  ├─ image_mod1.py         # Mode 1 AI image generation
-   │  ├─ image_mod2.py         # Mode 2 AI image generation
-   │  ├─ image_mod3.py         # Mode 3 AI image generation
-   │  ├─ caption_review.py     # Interactive caption & image review/edit (Mod 1)
-   │  └─ preview.py            # HTML preview builder
-   └─ integrations/
-      ├─ google_docs.py        # Read brand/style guide from Google Docs
-      ├─ google_sheets.py      # Fetch products from Google Sheets
-      ├─ instagram_api.py      # Login & upload via instagrapi
-      └─ openai_client.py      # OpenAI client factory
